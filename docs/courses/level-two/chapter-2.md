@@ -109,7 +109,6 @@ Build a workflow that adds five days to an input date from the Customer Datastor
 
 
 To begin:
-<!-- To do: need to figure out what the actual desired output is here since Date & Time options have changed and I'm unclear what the Set node should be doing-->
 1. Add the **Customer Datastore (n8n training) node** with the **Get All People** action selected. Return All.
 2. Add the **Date & Time node** to Round Up the created Date from the datastore to End of Month. Output this to field new-date. Include all input fields.
 3. Add the **If node** to check if that new rounded date is after `1960-01-01 00:00:00`.

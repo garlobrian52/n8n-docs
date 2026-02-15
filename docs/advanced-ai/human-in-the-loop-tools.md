@@ -48,12 +48,14 @@ In your workflow, click the **Tools** connector on an AI Agent node to open the 
 2. Select your preferred approval channel from the available options.
 3. Configure the approval channel with the appropriate credentials and settings.
 
+/// note | Visual guide
+For a visual walkthrough of setting up human review, refer to the [AI Agent node documentation](/integrations/builtin/cluster-nodes/root-nodes/n8n-nodes-langchain.agent/index.md).
+///
+
 ### Step 3: Connect tools to the review step
 
 1. Add the tools that require approval to the human review step's tool connector.
 2. Configure each tool as you normally would.
-
-<!-- TBD: Add screenshot showing Tools panel with Human review section and connected tools -->
 
 ## Available approval channels
 
@@ -109,7 +111,14 @@ Consider including:
 - What happens when approval is denied
 - How the AI should respond to rejections (for example, inform the user, suggest alternatives, or ask for clarification)
 
-<!-- TBD: Provide an example snippet -->
+**Example system prompt snippet:**
+
+```
+You have access to several tools to help users. Some tools require human approval before execution. If a tool call is denied:
+1. Inform the user that the action couldn't be completed due to review rejection
+2. Suggest alternative approaches if appropriate
+3. Ask for clarification on how to proceed
+```
 
 ## Chaining and subagents
 

@@ -53,7 +53,9 @@ We recommend following these resources to set up your Agent 365 integration:
 
 ### No conversation context in metadata
 
-Currently, incoming messages don't include metadata to link memory to a specific user or conversation context. This functionality is coming soon.
+/// note | Upcoming feature
+Currently, incoming messages don't include metadata to link memory to a specific user or conversation context. This functionality is planned for a future release.
+///
 
 ## Related resources
 

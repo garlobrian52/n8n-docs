@@ -5,10 +5,10 @@ contentType: howto
 
 # Set up user management on n8n Cloud
 
-To access user management, upgrade to version 0.195.0 or newer.
+User management is available on all current versions of n8n Cloud.
 
-/// warning | Irreversible upgrade
-Once you upgrade your Cloud instance to an n8n version with user management, you can't downgrade your version.
+/// note | Account upgrade
+If you're using an older version of n8n Cloud, you may need to upgrade your instance to access user management features.
 ///
 
 ## Step one: In-app setup
