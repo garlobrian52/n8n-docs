@@ -9,9 +9,9 @@ priority: critical
 
 The Loop Over Items node helps you loop through data when needed.
 
-The node saves the original incoming data, and with each iteration, returns a predefined amount of data through the **loop** output.
+The node saves the original incoming data, and with each iteration, returns a predefined amount of data through the **Loop** output.
 
-When the node execution completes, it combines all of the processed data and returns it through the **done** output.
+yes When the node execution completes, it combines all of the processed data and returns it through the **done** output.
 
 ## When to use the Loop Over Items node
 
@@ -29,6 +29,8 @@ These links highlight some of the cases where the Loop Over Items node can be us
 
 Enter the number of items to return with each call.
 
+
+## Node reference
 ## Node options
 
 ### Reset
@@ -86,9 +88,9 @@ Copy the workflow file above and paste into your instance, or manually build it 
 
 ### Check that the node has processed all items
 
-To check if the node still has items to process, use the following expression: `{{$("Loop Over Items").context["noItemsLeft"]}}`. This expression returns a boolean value. If the node still has data to process, the expression returns `false`, otherwise it returns `true`.
+To check if the node still has items to process, use the following expression: `$("<loop-over-items-node-name>").context["noItemsLeft"];`. This expression returns a boolean value. If the node still has data to process, the expression returns `false`, otherwise it returns `true`.
 
 ### Get the current running index of the node
 
-To get the current running index of the node, use the following expression: `{{$("Loop Over Items").context["currentRunIndex"];}}`.
+wTo get the current running index of the node, use the following expression: `$("<loop-over-item-node-name>").context["currentRunIndex"];`.
 
