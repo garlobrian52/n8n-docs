@@ -1,17 +1,19 @@
 ---
 title: Motorhead credentials
 description: Documentation for the Motorhead credentials. Use these credentials to authenticate Motorhead in n8n, a workflow automation platform.
+contentType: [integration, reference]
+priority: medium
 ---
 
 # Motorhead credentials
 
+/// warning | Deprecated
+The Motorhead project is no longer maintained. The [Motorhead node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) is deprecated, and will be removed in a future version.
+///
+
 You can use these credentials to authenticate the following nodes:
 
-* [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead/)
-
-## Prerequisites
-
-Create a [Motorhead](https://www.metal.ai/){:target=_blank .external-link} account.
+* [Motorhead](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md)
 
 ## Supported authentication methods
 
@@ -19,16 +21,27 @@ Create a [Motorhead](https://www.metal.ai/){:target=_blank .external-link} accou
 
 ## Related resources
 
-Refer to [Motorhead's API documentation](https://docs.getmetal.io/rest-api/introduction){:target=_blank .external-link} for more information about the service.
+Refer to [Motorhead's API documentation](https://docs.getmetal.io/rest-api/introduction) for more information about the service.
 
 --8<-- "_snippets/integrations/builtin/cluster-nodes/langchain-overview-link.md"
 
 ## Using API key
 
-To configure this credential, you'll need:
+To configure this credential, you'll need a [Motorhead](https://www.metal.ai/) account and:
 
-- The **Host** URL: Update this to a different URL if you are self-hosting Motorhead.
-- An **API Key**: Generated in **Settings > Organization**. Refer to [Generate an API key](https://docs.getmetal.io/guides/misc-get-keys){:target=_blank .external-link} for instructions on generating API keys.
-- A **Client ID**: Once the API Key generates, return to the API key list, which will now display the **clientID** for that key.
+- Your **Host** URL
+- An **API Key**
+- A **Client ID**
 
+To set it up, you'll generate an API key:
 
+1. If you're self-hosting Motorhead, update the **Host** URL to match your Motorhead URL.
+2. In Motorhead, go to **Settings > Organization**.
+3. In the **API Keys** section, select **Create**.
+4. Enter a **Name** for your API Key, like `n8n integration`.
+5. Select **Generate**.
+6. Copy the **apiKey** and enter it in your n8n credential.
+7. Return to the API key list.
+8. Copy the **clientID** for the key and enter it as the **Client ID** in your n8n credential.
+
+Refer to [Generate an API key](https://docs.getmetal.io/guides/misc-get-keys) for more information.

@@ -37,6 +37,8 @@ The way you build workflows affects how much data they consume when executed. Al
 
 Note that n8n itself consumes memory to run. On average, the software alone uses around 180MiB RAM.
 
+Interactions with the UI also consume memory. Playing around with the workflow UI while it performs heavy executions could also push the memory capacity over the limit.
+
 ## How to manage execution data on Cloud
 
 Execution data includes node data, parameters, variables, execution context, and binary data references. It's text-based.
@@ -55,7 +57,7 @@ In the admin dashboard:
 
 In your workflow settings:
 
-1. Select the **Options** <span class="inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu.
+1. Select the **Options** <span class="n8n-inline-image">![Options menu](/_images/common-icons/three-dot-options-menu.png){.off-glb}</span> menu.
 1. Select **Settings**. n8n opens the **Workflow settings** modal.
 1. Change **Save successful production executions** to **Do not save**.
 
@@ -66,7 +68,7 @@ In your workflow settings:
 n8n automatically prunes execution logs after a certain time or once you reach the max storage limit, whichever comes first. The pruning always happens from oldest to newest and the limits depend on your Could plan:
 
 * Start and Starter plans: max 2500 executions saved and 7 days execution log retention;
-* Pro and Power plans: max 25000 executions saved and 30 days execution log retention;
+* Pro plans: max 25000 executions saved and 30 days execution log retention;
 * Enterprise plan: max 50000 executions saved and unlimited execution log retention time.
 
 ### Manual data pruning

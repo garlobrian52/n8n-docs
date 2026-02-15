@@ -13,7 +13,7 @@ This page contains advice on best practices relating to user management in n8n.
 * Users must be careful not to edit the same workflow simultaneously. It's possible to do it, but the users will overwrite each other's changes.
 * To move workflows between accounts, export the workflow as JSON, then import it to the new account. Note that this action loses the workflow history.
 * Webhook paths must be unique across the entire instance. This means each webhook path must be unique for all workflows and all users. By default, n8n generates a long random value for the webhook path, but users can edit this to their own custom path. If two users set the same path value:
-    * The path works for the first workflow that's run or activated.
+    * The path works for the first workflow that's run or published.
     * Other workflows will error if they try to run with the same path.
 
 ## Self-hosted
@@ -25,5 +25,5 @@ If you run n8n behind a reverse proxy, set the following environment variables s
 * `N8N_PROTOCOL`
 * `N8N_EDITOR_BASE_URL`  
 
-More information on these variables is available in [Environment variables](/hosting/configuration/environment-variables/).
+More information on these variables is available in [Environment variables](/hosting/configuration/environment-variables/index.md).
 

@@ -1,18 +1,18 @@
 ---
 title: Vero credentials
 description: Documentation for Vero credentials. Use these credentials to authenticate Vero in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 
 # Vero credentials
 
 You can use these credentials to authenticate the following nodes:
 
-- [Vero](/integrations/builtin/app-nodes/n8n-nodes-base.vero/)
+- [Vero](/integrations/builtin/app-nodes/n8n-nodes-base.vero.md)
 
 ## Prerequisites
 
-Create a [Vero](https://getvero.com/){:target=_blank .external-link} account.
+Create a [Vero](https://getvero.com/) account.
 
 ## Supported authentication methods
 
@@ -20,11 +20,11 @@ Create a [Vero](https://getvero.com/){:target=_blank .external-link} account.
 
 ## Related resources
 
-Refer to [Vero's API documentation](https://developers.getvero.com/track-api-reference/#/){:target=_blank .external-link} for more information about the service.
+Refer to [Vero's API documentation](https://developers.getvero.com/track-api-reference/#/) for more information about the service.
 
 ## Using API auth token
 
 To configure this credential, you'll need:
 
-- An **Auth Token**: Get your auth token from your Vero account [settings](https://app.getvero.com/settings/project){:target=_blank .external-link}. Refer to [API authentication](https://developers.getvero.com/track-api-reference/#/#authentication){:target=_blank .external-link} for more information.
+- An **Auth Token**: Get your auth token from your Vero account [settings](https://app.getvero.com/settings/project). Refer to [API authentication](https://developers.getvero.com/track-api-reference/#/#authentication) for more information.
 

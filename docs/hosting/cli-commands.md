@@ -13,6 +13,7 @@ You can use CLI commands with self-hosted n8n. Depending on how you choose to in
 
 * npm: the `n8n` command is directly available. The documentation uses this in the examples below.
 * Docker: the `n8n` command is available within your Docker container:
+
     ```sh
     docker exec -u node -it <n8n-container-name> <n8n-cli-command>
     ```
@@ -33,7 +34,7 @@ You can change the active status of a workflow using the CLI.
 
 /// note | Restart required
 These commands operate on your n8n database. If you execute them while n8n is running, the changes don't take effect until you restart n8n.
-///	
+///
 
 Set the active status of a workflow by its ID to false:
 
@@ -57,6 +58,22 @@ Set the active status to true for all the workflows:
 
 ```bash
 n8n update:workflow --all --active=true
+```
+
+## Export entities
+
+You can export your database entities from n8n using the CLI. This tooling allows you to export all entity types from one database type, such as SQLite, and import them into another database type, such as Postgres.
+
+Command flags:
+
+| Flag | Description |
+|-------------|-------|
+| --help | Help prompt. |
+| --outputDir | Output directory path |
+| --includeExecutionHistoryDataTables | Include execution history data tables, these are excluded by default as they can be very large  |
+
+```bash
+n8n export:entities --outputDir=./outputs --includeExecutionHistoryDataTables=true
 ```
 
 ## Export workflows and credentials
@@ -133,10 +150,28 @@ Export all the credentials in plain text format. You can use this to migrate fro
 /// warning | Sensitive information
 All sensitive information is visible in the files.
 ///
+
 ```bash
 n8n export:credentials --all --decrypted --output=backups/decrypted.json
 ```
 
+## Import entities
+
+You can import entities from a previous `export:entities` command using this command, it allows importing of entities into a database type that differs from the exported database type. Current supported database types include: SQLite, Postgres.
+
+The database is expected to be empty prior to import, this can be forced with the `--truncateTables` parameter.
+
+Command flags:
+
+| Flag | Description |
+|-------------|-------|
+| --help | Help prompt. |
+| --inputDir | Input directory that holds output files for import |
+| --truncateTables | Truncate tables before import  |
+
+```bash
+n8n import:entities --inputDir ./outputs --truncateTables true
+```
 
 ## Import workflows and credentials
 
@@ -155,6 +190,7 @@ Available flags:
 | --projectId | Import the workflow or credential to the specified project. Can't be used with `--userId`. |
 | --separate | Imports `*.json` files from directory provided by --input. |
 | --userId | Import the workflow or credential to the specified user. Can't be used with `--projectId`. |
+| --skipMigrationChecks | Skip migration validation checks. |
 
 /// note | Migrating to SQLite
 n8n limits workflow and credential names to 128 characters, but SQLite doesn't enforce size limits.
@@ -164,9 +200,6 @@ This might result in errors like **Data too long for column name** during the im
 In this case, you can edit the names from the n8n interface and export again, or edit the JSON file directly before importing.
 ///
 
-
-
-
 ### Workflows
 
 Import workflows from a specific file:
@@ -174,6 +207,7 @@ Import workflows from a specific file:
 ```bash
 n8n import:workflow --input=file.json
 ```
+
 Import all the workflow files as JSON from the specified directory:
 
 ```bash
@@ -203,6 +237,8 @@ Clear your existing license from n8n's database and reset n8n to default feature
 ```sh
 n8n license:clear
 ```
+
+If your license includes [floating entitlements](/glossary.md#entitlement-n8n), running this command will also attempt to release them back to the pool, making them available for other instances.
 
 ### Info
 
@@ -238,9 +274,51 @@ You can reset the LDAP settings using the command below.
 n8n ldap:reset
 ```
 
+## Uninstall community nodes and credentials
+
+You can manage [community nodes](/integrations/community-nodes/installation/index.md) using the n8n CLI. For now, you can only uninstall community nodes and credentials, which is useful if a community node causes instability.
+
+Command flags:
+
+ | Flag         | Description                                                                                                                      |
+ |--------------|----------------------------------------------------------------------------------------------------------------------------------|
+ | --help       | Show CLI help.                                                                                                                   |
+ | --credential | The credential type. Get this value by visiting the node's `<NODE>.credential.ts` file and getting the value of `name`.            |
+ | --package    | Package name of the community node.                                                                                              |
+ | --uninstall  | Uninstalls the node.                                                                                                             |
+ | --userId     | The ID of the user who owns the credential. On self-hosted, query the database. On cloud, query the API with your API key. |
+
+### Nodes
+
+Uninstall a community node by package name:
+
+```sh
+n8n community-node --uninstall --package <COMMUNITY_NODE_NAME>
+```
+
+For example, to uninstall the [Evolution API community node](https://www.npmjs.com/package/n8n-nodes-evolution-api), type:
+
+```sh
+n8n community-node --uninstall --package n8n-nodes-evolution-api
+```
+
+### Credentials
+
+Uninstall a community node credential:
+
+```sh
+n8n community-node --uninstall --credential <CREDENTIAL_TYPE> --userId <ID>
+```
+
+For example, to uninstall the [Evolution API community node credential](https://www.npmjs.com/package/n8n-nodes-evolution-api), visit the [repository](https://github.com/oriondesign2015/n8n-nodes-evolution-api) and navigate to the [`credentials.ts` file](https://github.com/oriondesign2015/n8n-nodes-evolution-api/blob/main/credentials/EvolutionApi.credentials.ts) to find the `name`:
+
+```sh
+n8n community-node --uninstall --credential evolutionApi --userId 1234
+```
+
 ## Security audit
 
-You can run a [security audit](/hosting/logging-monitoring/security-audit/) on your n8n instance, to detect common security issues.
+You can run a [security audit](/hosting/securing/security-audit.md) on your n8n instance, to detect common security issues.
 
 ```sh
 n8n audit

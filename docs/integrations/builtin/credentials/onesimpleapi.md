@@ -1,7 +1,7 @@
 ---
 title: One Simple API credentials
 description: Documentation for One Simple API credentials. Use these credentials to authenticate One Simple API in n8n, a workflow automation platform.
-contentType: integration
+contentType: [integration, reference]
 ---
 <!-- vale off -->
 <!-- Not adding 'Simple' to accept.txt but can't really get away from it here -->
@@ -9,11 +9,11 @@ contentType: integration
 
 You can use these credentials to authenticate the following nodes:
 
-- [One Simple API](/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi/)
+- [One Simple API](/integrations/builtin/app-nodes/n8n-nodes-base.onesimpleapi.md)
 
 ## Prerequisites
 
-Create a [One Simple API](https://onesimpleapi.com/register){:target=_blank .external-link} account.
+Create a [One Simple API](https://onesimpleapi.com/register) account.
 
 ## Supported authentication methods
 
@@ -21,7 +21,7 @@ Create a [One Simple API](https://onesimpleapi.com/register){:target=_blank .ext
 
 ## Related resources
 
-Refer to [One Simple API's documentation](https://onesimpleapi.com/docs){:target=_blank .external-link} for more information about the service.
+Refer to [One Simple API's documentation](https://onesimpleapi.com/docs) for more information about the service.
 
 ## Using API token
 
