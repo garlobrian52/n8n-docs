@@ -10,4 +10,6 @@ Understanding n8n's underlying architecture is helpful if you need to:
 * Embed n8n
 * Customize n8n's default databases
 
-This section is a work in progress. If you have questions, please try the [forum](https://community.n8n.io/) and let n8n know which architecture documents would be useful for you.
+/// note | Documentation in progress
+This section is being expanded. If you have questions about n8n's architecture, please visit the [n8n community forum](https://community.n8n.io/) where you can ask questions and share feedback about what documentation would be most useful.
+///
