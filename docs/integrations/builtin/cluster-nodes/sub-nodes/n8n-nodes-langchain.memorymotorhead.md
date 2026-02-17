@@ -7,8 +7,8 @@ priority: medium
 
 # Motorhead node
 
-/// warning | Deprecated
-The Motorhead project is no longer maintained. This node is deprecated, and will be removed in a future version.
+/// warning | Node deprecated - will be removed
+The Motorhead project is no longer maintained. This node is deprecated and will be removed in a future version of n8n. Plan to migrate to an alternative memory solution. Do not use this node for new workflows.
 ///
 
 Use the Motorhead node to use Motorhead as a [memory](/glossary.md#ai-memory) server.

@@ -15,8 +15,8 @@ On this page, you'll find a list of operations the Asana node supports and links
 Refer to [Asana credentials](/integrations/builtin/credentials/asana.md) for guidance on setting up authentication.
 ///
 
-/// note | Update to 1.22.2 or above
-Due to changes in Asana's API, some operations in this node stopped working on 17th January 2023. Upgrade to n8n 1.22.2 or above.
+/// note | Required version for API compatibility
+Due to changes in Asana's API, some operations in this node stopped working on 17 January 2023. You must upgrade to n8n version 1.22.2 or above to use this node. If you're using an older version of n8n, update your installation to ensure compatibility with Asana's current API.
 ///
 
 --8<-- "_snippets/integrations/builtin/app-nodes/ai-tools.md"

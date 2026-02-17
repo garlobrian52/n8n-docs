@@ -21,8 +21,8 @@ Create an [Airtable](https://airtable.com/) account.
 - Personal Access Token (PAT)
 - OAuth2
 
-/// note | API Key deprecation
-n8n used to offer an API key authentication method with Airtable. Airtable [fully deprecated these keys](https://support.airtable.com/v1/docs/airtable-api-deprecation-guidelines) as of February 2024. If you were using an Airtable API credential, replace it with an Airtable Personal Access Token or Airtable OAuth2 credential. n8n recommends using Personal Access Token instead.
+/// note | API Key fully deprecated
+n8n previously offered an API key authentication method with Airtable. Airtable [fully deprecated these keys](https://support.airtable.com/v1/docs/airtable-api-deprecation-guidelines) in February 2024, and they no longer work. If you were using an Airtable API credential, you must replace it with an Airtable Personal Access Token or Airtable OAuth2 credential. n8n recommends using Personal Access Token for most use cases.
 ///
 
 ## Related resources
