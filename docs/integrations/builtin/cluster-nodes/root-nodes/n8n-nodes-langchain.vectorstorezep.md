@@ -6,8 +6,8 @@ contentType: [integration, reference]
 
 # Zep Vector Store node
 
-/// warning | Deprecated
-This node is deprecated, and will be removed in a future version. 
+/// warning | Node deprecated - will be removed
+This node is deprecated and will be removed in a future version of n8n. The Zep team deprecated the open source Zep Community Edition in April 2025. Plan to migrate to an alternative vector store solution. Do not use this node for new workflows.
 ///
 
 Use the Zep Vector Store to interact with Zep vector databases. You can insert documents into a vector database, get documents from a vector database, retrieve documents to provide them to a retriever connected to a [chain](/glossary.md#ai-chain), or connect it directly to an [agent](/glossary.md#ai-agent) to use as a [tool](/glossary.md#ai-tool).

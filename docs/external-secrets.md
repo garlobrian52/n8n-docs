@@ -12,8 +12,8 @@ contentType: howto
 * n8n doesn't support [HashiCorp Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets).
 ///
 
-/// warning | Infisical deprecation
-Infisical is deprecated and is no longer recommended. Use an alternative external secrets provider.
+/// warning | Infisical no longer recommended
+Infisical is deprecated and is no longer recommended for new implementations. Use an alternative external secrets provider such as AWS Secrets Manager, Azure Key Vault, Google Cloud Platform Secrets Manager, or HashiCorp Vault. If you're currently using Infisical, plan to migrate to one of the supported alternatives.
 ///
 
 You can use an external secrets store to manage [credentials](/glossary.md#credential-n8n) for n8n.

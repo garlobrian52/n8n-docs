@@ -7,8 +7,8 @@ priority: medium
 
 # Motorhead credentials
 
-/// warning | Deprecated
-The Motorhead project is no longer maintained. The [Motorhead node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) is deprecated, and will be removed in a future version.
+/// warning | Credentials deprecated - will be removed
+The Motorhead project is no longer maintained. The [Motorhead node](/integrations/builtin/cluster-nodes/sub-nodes/n8n-nodes-langchain.memorymotorhead.md) is deprecated and will be removed in a future version of n8n. Plan to migrate to an alternative memory solution.
 ///
 
 You can use these credentials to authenticate the following nodes:

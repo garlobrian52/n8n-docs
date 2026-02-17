@@ -44,8 +44,8 @@ Follow these instructions if you're using [Zep Cloud](https://app.getzep.com):
 
 ### Self-hosted Zep Open Source setup
 
-/// warning | Deprecated
-The Zep team [deprecated the open source Zep Community Edition](https://blog.getzep.com/announcing-a-new-direction-for-zeps-open-source-strategy/) in April, 2025. These instructions may not work in the future.
+/// warning | Open Source Edition deprecated
+The Zep team [deprecated the open source Zep Community Edition](https://blog.getzep.com/announcing-a-new-direction-for-zeps-open-source-strategy/) in April 2025. These instructions for self-hosted Zep Open Source are no longer maintained and may not work. New users should use Zep Cloud instead. If you're currently using self-hosted Zep Open Source, plan to migrate to Zep Cloud or an alternative solution.
 ///
 
 Follow these instructions if you're self-hosting Zep Open Source:

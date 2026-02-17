@@ -18,8 +18,8 @@ Create a [Paddle](https://paddle.com/) account.
 
 - API access token (Classic)
 
-/// warning | Paddle Classic API
-This credential works with Paddle Classic's API. If you joined Paddle after August 2023, you're using the [Paddle Billing API](https://developer.paddle.com/api-reference/overview) and this credential may not work for you.
+/// warning | Paddle Classic API only
+This credential works only with Paddle Classic's API. If you joined Paddle after August 2023, you're using the [Paddle Billing API](https://developer.paddle.com/api-reference/overview) and this credential will not work for you. Paddle Classic is only available to customers who joined before August 2023. New Paddle users must use the Paddle Billing API, which currently requires a different integration approach.
 ///
 
 ## Related resources
