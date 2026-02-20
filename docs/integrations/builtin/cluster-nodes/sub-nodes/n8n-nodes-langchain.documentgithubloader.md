@@ -6,8 +6,8 @@ contentType: [integration, reference]
 
 # GitHub Document Loader node
 
-/// warning | Node deprecated - will be removed
-This node is deprecated and will be removed in a future version of n8n. Plan to migrate to an alternative solution for loading GitHub data. Do not use this node for new workflows.
+/// warning | Deprecated
+This node is deprecated, and will be removed in a future version.
 ///
 
 Use the GitHub Document Loader node to load data from a GitHub repository for [vector stores](/glossary.md#ai-vector-store) or summarization.

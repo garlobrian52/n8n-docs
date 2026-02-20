@@ -23,8 +23,8 @@ Create a [Zoom](https://zoom.us/) account. Your account must have one of the fol
 - API JWT token
 - OAuth2
 
-/// warning | API JWT token fully deprecated
-Zoom removed support for JWT access tokens in June 2023. This authentication method is no longer supported. You must use OAuth2 for all credentials. If you have existing JWT credentials, migrate them to OAuth2 as soon as possible.
+/// warning | API JWT token deprecation
+Zoom removed support for JWT access tokens in June 2023. You must use OAuth2 for all new credentials.
 ///
 
 ## Related resources
@@ -33,9 +33,7 @@ Refer to [Zoom's API documentation](https://developers.zoom.us/docs/api/) for mo
 
 ## Using API JWT token
 
-/// danger | No longer supported
-This authentication method has been fully deprecated by Zoom since June 2023 and is no longer supported. Don't create new credentials with this method. Migrate any existing JWT credentials to OAuth2.
-///
+This authentication method has been fully deprecated by Zoom. Don't create new credentials with it.
 
 To configure this credential, you'll need:
 
