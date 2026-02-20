@@ -7,8 +7,8 @@ priority: medium
 
 # Zep node
 
-/// warning | Node deprecated - will be removed
-This node is deprecated and will be removed in a future version of n8n. The Zep team deprecated the open source Zep Community Edition in April 2025. Plan to migrate to an alternative memory solution. Do not use this node for new workflows.
+/// warning | Deprecated
+This node is deprecated, and will be removed in a future version. 
 ///
 
 Use the Zep node to use Zep as a [memory](/glossary.md#ai-memory) server.
