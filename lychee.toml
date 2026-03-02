@@ -130,6 +130,9 @@ exclude = [
   '^https://api\.mist\.com/',  # Only works when logged in
   '^https://business\.adobe\.com/products/commerce\.html',  # Times out on automated checks
   '^https://developer\.paddle\.com/',  # Times out on automated checks
+  '^https://public-api\.lonescale\.com/',  # API endpoint returns 404 on automated checks
+  '^https://xata\.io/docs/',  # Xata docs restructured, URLs return 404
+  '^https://.*getflow\.com',  # Certificate error on automated checks
   ]
 
 # Exclude these filesystem paths from getting checked.
