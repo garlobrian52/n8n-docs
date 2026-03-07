@@ -20,3 +20,6 @@ __pycache__/
 ## Ignore ephemeral doc-tool output
 output.csv
 _doctools/*.csv
+
+## Ignore cost dashboard generated output
+out/

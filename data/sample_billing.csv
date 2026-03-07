@@ -1,0 +1,16 @@
+date,service,dimension,cost
+2024-01-01,Compute,prod,120.50
+2024-01-01,Storage,prod,30.00
+2024-01-01,Network,dev,15.25
+2024-01-02,Compute,prod,118.75
+2024-01-02,Storage,dev,28.50
+2024-01-02,Network,prod,20.00
+2024-01-03,Compute,dev,95.00
+2024-01-03,Storage,prod,32.00
+2024-01-03,Network,prod,18.50
+2024-01-04,Compute,prod,130.00
+2024-01-04,Storage,dev,25.00
+2024-01-04,Network,dev,12.00
+2024-01-05,Compute,prod,125.25
+2024-01-05,Storage,prod,35.00
+2024-01-05,Network,prod,22.75
