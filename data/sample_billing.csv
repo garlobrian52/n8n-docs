@@ -1,0 +1,16 @@
+date,service,description,quantity,unit_price,cost,currency
+2024-01-01,Compute,n8n worker - t3.medium,720,0.0464,33.41,USD
+2024-01-01,Storage,S3 standard storage - 50GB,50,0.023,1.15,USD
+2024-01-01,Database,RDS PostgreSQL - db.t3.micro,720,0.017,12.24,USD
+2024-01-01,Network,Data transfer out - 10GB,10,0.09,0.90,USD
+2024-01-01,Compute,n8n webhook server - t3.small,720,0.023,16.56,USD
+2024-02-01,Compute,n8n worker - t3.medium,672,0.0464,31.18,USD
+2024-02-01,Storage,S3 standard storage - 55GB,55,0.023,1.27,USD
+2024-02-01,Database,RDS PostgreSQL - db.t3.micro,672,0.017,11.42,USD
+2024-02-01,Network,Data transfer out - 12GB,12,0.09,1.08,USD
+2024-02-01,Compute,n8n webhook server - t3.small,672,0.023,15.46,USD
+2024-03-01,Compute,n8n worker - t3.medium,744,0.0464,34.52,USD
+2024-03-01,Storage,S3 standard storage - 60GB,60,0.023,1.38,USD
+2024-03-01,Database,RDS PostgreSQL - db.t3.micro,744,0.017,12.65,USD
+2024-03-01,Network,Data transfer out - 15GB,15,0.09,1.35,USD
+2024-03-01,Compute,n8n webhook server - t3.small,744,0.023,17.11,USD

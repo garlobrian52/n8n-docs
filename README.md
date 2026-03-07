@@ -100,6 +100,48 @@ Please read the [CONTRIBUTING](CONTRIBUTING.md) guide.
 You can find [style guidance](https://github.com/n8n-io/n8n-docs/wiki/Styles) in the wiki.
 
 
+## Cost dashboard
+
+The repository includes a CLI tool that generates cost summary reports from a billing CSV file.
+
+### Usage
+
+```bash
+python scripts/cost_dashboard.py --csv data/sample_billing.csv --out-dir out/
+```
+
+A sample billing file is provided at `data/sample_billing.csv`.
+
+### Arguments
+
+| Argument | Description |
+|----------|-------------|
+| `--csv FILE` | Path to the input billing CSV (required). |
+| `--out-dir DIR` | Directory to write output CSV files (required, or use `--out`). |
+| `--out DIR` | Alias for `--out-dir`. |
+
+### Output files
+
+The command writes three CSV files to the specified output directory:
+
+| File | Description |
+|------|-------------|
+| `summary_by_service.csv` | Total cost per service. |
+| `summary_by_date.csv` | Total cost per date. |
+| `total.csv` | Grand total cost across all services and dates. |
+
+### Smoke test
+
+```bash
+rm -rf out/
+python scripts/cost_dashboard.py --csv data/sample_billing.csv --out-dir out/
+echo $?
+ls -la out/
+```
+
+Expected output: exit code `0` and `out/` containing `summary_by_service.csv`, `summary_by_date.csv`, and `total.csv`.
+
+
 ## Support
 
 If you have problems or questions, head to n8n's forum: https://community.n8n.io
