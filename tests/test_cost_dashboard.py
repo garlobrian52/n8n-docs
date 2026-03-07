@@ -2,7 +2,6 @@
 
 import csv
 import os
-import sys
 import types
 
 import pytest
@@ -18,6 +17,12 @@ _SCRIPT = os.path.join(os.path.dirname(__file__), "..", "scripts", "cost_dashboa
 
 def _load_module():
     spec = importlib.util.spec_from_file_location("cost_dashboard", _SCRIPT)
+    if spec is None or spec.loader is None:
+        raise ImportError(
+            f"Cannot load module from {_SCRIPT!r}: "
+            "spec_from_file_location returned None. "
+            "Check that the script path is correct and the file exists."
+        )
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     return mod
