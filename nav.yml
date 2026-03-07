@@ -1273,6 +1273,7 @@ nav:
       - Database structure: hosting/architecture/database-structure.md
     - Using the CLI:
       - CLI commands: hosting/cli-commands.md
+      - Cost dashboard: hosting/cost-dashboard.md
   - Code in n8n:
       - code/index.md
       - Expressions: code/expressions.md
