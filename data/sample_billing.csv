@@ -1,0 +1,21 @@
+Date,Organization Plan,Entity Name,Entity Type,CSP,Region,Warehouse ID,Service ID,Compute ($),Storage ($),Network ($),Support ($),Total ($)
+2024-01-01,Enterprise,Acme Corp,Account,AWS,us-east-1,WH-001,SVC-001,120.50,30.00,10.00,5.00,165.50
+2024-01-01,Enterprise,Acme Corp,Account,AWS,us-east-1,WH-002,SVC-002,80.00,15.00,5.00,2.50,102.50
+2024-01-01,Standard,Beta LLC,Account,GCP,us-central1,WH-003,SVC-003,45.00,10.00,3.00,1.00,59.00
+2024-01-01,Standard,Beta LLC,Account,GCP,us-central1,WH-004,SVC-004,30.00,8.00,2.00,,40.00
+2024-01-02,Enterprise,Acme Corp,Account,AWS,us-east-1,WH-001,SVC-001,135.00,32.00,11.00,5.50,183.50
+2024-01-02,Enterprise,Acme Corp,Account,AWS,us-east-1,WH-002,SVC-002,90.00,16.00,6.00,3.00,115.00
+2024-01-02,Standard,Beta LLC,Account,GCP,us-central1,WH-003,SVC-003,50.00,11.00,3.50,1.25,65.75
+2024-01-02,Standard,Beta LLC,Account,GCP,us-central1,WH-004,SVC-004,35.00,9.00,2.50,,46.50
+2024-01-03,Enterprise,Acme Corp,Account,AWS,us-east-1,WH-001,SVC-001,110.00,28.00,9.00,4.50,151.50
+2024-01-03,Enterprise,Acme Corp,Account,Azure,eastus,WH-005,SVC-005,200.00,50.00,20.00,8.00,278.00
+2024-01-03,Standard,Beta LLC,Account,GCP,us-central1,WH-003,SVC-003,55.00,12.00,4.00,1.50,72.50
+2024-01-03,Standard,Gamma Inc,SubAccount,AWS,eu-west-1,WH-006,SVC-006,75.00,20.00,7.00,3.00,105.00
+2024-01-04,Enterprise,Acme Corp,Account,AWS,us-east-1,WH-001,SVC-001,125.00,31.00,10.50,5.25,171.75
+2024-01-04,Enterprise,Acme Corp,Account,Azure,eastus,WH-005,SVC-005,210.00,52.00,21.00,8.50,291.50
+2024-01-04,Standard,Beta LLC,Account,GCP,us-central1,WH-003,SVC-003,48.00,10.50,3.25,1.10,62.85
+2024-01-04,Standard,Gamma Inc,SubAccount,AWS,eu-west-1,WH-006,SVC-006,80.00,22.00,7.50,3.25,112.75
+2024-01-05,Enterprise,Acme Corp,Account,AWS,us-east-1,WH-001,SVC-001,130.00,33.00,11.50,5.75,180.25
+2024-01-05,Enterprise,Acme Corp,Account,Azure,eastus,WH-005,SVC-005,195.00,48.00,19.50,7.75,270.25
+2024-01-05,Standard,Beta LLC,Account,GCP,us-central1,WH-003,SVC-003,52.00,11.50,3.75,1.30,68.55
+2024-01-05,Standard,Gamma Inc,SubAccount,AWS,eu-west-1,WH-006,SVC-006,85.00,23.00,8.00,3.50,119.50
