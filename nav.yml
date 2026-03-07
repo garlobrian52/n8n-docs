@@ -1301,6 +1301,7 @@ nav:
       - Cookbook:
           - Handling dates: code/cookbook/luxon.md
           - Query JSON with JMESPath: code/cookbook/jmespath.md
+          - Analyze a billing CSV: code/cookbook/billing-csv-analysis.md
           - Built-in methods and variables examples:
               - code/cookbook/builtin/index.md
               - execution: code/cookbook/builtin/execution.md
