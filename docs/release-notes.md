@@ -348,7 +348,7 @@ Learn more in the [Chat node documentation](https://docs.n8n.io/integrations/bui
 
 [AbdulTawabJuly](https://github.com/AbdulTawabJuly)  
 [ByteEVM](https://github.com/ByteEVM)  
-[aikido-autofix[bot]](https://github.com/aikido-autofix[bot])  
+aikido-autofix[bot]  
 [sudarshan12s](https://github.com/sudarshan12s)  
 [KaanAydinli](https://github.com/KaanAydinli)  
 

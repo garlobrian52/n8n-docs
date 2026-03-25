@@ -20,7 +20,7 @@ You can find authentication information for this node [here](/integrations/built
 
 * **Model**: Select the model to use to generate the embedding.
 
-Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/platform/pricing/).
+Learn more about available models in [Mistral's models documentation](https://docs.mistral.ai/getting-started/models/models_overview/).
 
 ## Node options
 
