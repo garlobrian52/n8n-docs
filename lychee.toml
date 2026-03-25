@@ -130,6 +130,10 @@ exclude = [
   '^https://api\.mist\.com/',  # Only works when logged in
   '^https://business\.adobe\.com/products/commerce\.html',  # Times out on automated checks
   '^https://developer\.paddle\.com/',  # Times out on automated checks
+  '^https://milvus\.io/',              # Too many redirects on automated checks
+  '^https://www\.getflow\.com/',       # Certificate error
+  '^https://developer\.getflow\.com/', # Certificate error
+  '^https://qdrant\.tech/documentation/cloud/create-cluster/', # Intermittent timeout
   ]
 
 # Exclude these filesystem paths from getting checked.

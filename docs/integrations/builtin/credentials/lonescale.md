@@ -21,7 +21,7 @@ Create a [LoneScale](https://www.lonescale.com/) account.
 
 ## Related resources
 
-Refer to [LoneScale's API documentation](https://public-api.lonescale.com/api) for more information about the service.
+Refer to [LoneScale's API documentation](https://help-center.lonescale.com/en/articles/6454360-lonescale-public-api) for more information about the service.
 
 ## Using API key
 

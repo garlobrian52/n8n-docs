@@ -21,7 +21,7 @@ Create a [Brevo](https://www.brevo.com/) developer account.
 
 ## Related resources
 
-Refer to [Brevo's API documentation](https://developers.brevo.com/reference/getting-started-1) for more information about authenticating with the service.
+Refer to [Brevo's API documentation](https://developers.brevo.com/docs/getting-started) for more information about authenticating with the service.
 
 ## API key
 

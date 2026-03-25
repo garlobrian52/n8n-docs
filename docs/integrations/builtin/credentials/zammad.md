@@ -13,7 +13,7 @@ You can use these credentials to authenticate the following nodes:
 ## Prerequisites
 
 - Create a hosted [Zammad](https://zammad.com/) account or set up your own Zammad instance.
-- For token authentication, enable **API Token Access** in **Settings > System > API**. Refer to [Setting up a Zammad](https://admin-docs.zammad.org/en/latest/system/integrations/zabbix.html?#setting-up-a-zammad) for more information.
+- For token authentication, enable **API Token Access** in **Settings > System > API**. Refer to [Setting up a Zammad](https://admin-docs.zammad.org/en/latest/system/integrations/zabbix.html#setting-up-a-zammad) for more information.
 
 ## Supported authentication methods
 

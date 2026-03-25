@@ -36,4 +36,4 @@ For these alerts, you'll need to subscribe your domain to the relevant alerts:
 
 ## Related resources
 
-Refer to [Webhooks for Certificate Transparency](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/webhooks-for-certificate-transparency) and Meta's [Certificate Transparency](https://developers.facebook.com/docs/graph-api/webhooks/reference/certificate-transparency/) Graph API reference for more information.
+Refer to [Webhooks for Certificate Transparency](https://developers.facebook.com/docs/graph-api/webhooks/getting-started/) and Meta's [Certificate Transparency](https://developers.facebook.com/docs/graph-api/webhooks/reference/) Graph API reference for more information.
