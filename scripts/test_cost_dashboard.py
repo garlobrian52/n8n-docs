@@ -111,7 +111,7 @@ def main():
         except AssertionError as exc:
             print(f"FAIL {test.__name__}: {exc}")
             failures.append(test.__name__)
-        except (AssertionError, OSError, subprocess.SubprocessError) as exc:
+        except (OSError, subprocess.SubprocessError) as exc:
             print(f"ERROR {test.__name__}: {exc}")
             failures.append(test.__name__)
 
