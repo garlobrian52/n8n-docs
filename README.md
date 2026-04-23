@@ -100,6 +100,62 @@ Please read the [CONTRIBUTING](CONTRIBUTING.md) guide.
 You can find [style guidance](https://github.com/n8n-io/n8n-docs/wiki/Styles) in the wiki.
 
 
+## Cost Dashboard
+
+`scripts/cost_dashboard.py` ingests a billing CSV and prints three summary tables to stdout. Optionally it writes those tables as CSV files to an output directory.
+
+### Prerequisites
+
+```bash
+pip install pandas
+```
+
+A synthetic sample CSV is provided at `data/sample_billing.csv`.
+
+### Flags
+
+| Flag | Description |
+|------|-------------|
+| `--csv PATH` | **(required)** Path to the input billing CSV. |
+| `--out DIR` | Output directory for CSV files (preferred spelling). |
+| `--out-dir DIR` | Output directory for CSV files (legacy alias for `--out`). Cannot be combined with `--out`. |
+
+> **Note:** Passing both `--out` and `--out-dir` at the same time exits with code 1 and an error message.
+
+### Tables produced
+
+1. **Daily totals** – one row per date with `total_usd` and `dod_change` (day-over-day change).
+2. **Spend by dimensions** – spend aggregated by Organization Plan, Entity Name, Entity Type, CSP, Region, Warehouse ID, and Service ID.
+3. **Cost-component breakdown** – sum of each `... ($)` money column (excluding Total), plus the grand Total.
+
+### Usage
+
+```bash
+# Print tables to stdout only
+python scripts/cost_dashboard.py --csv data/sample_billing.csv
+
+# Write CSV outputs to out/ (preferred flag)
+python scripts/cost_dashboard.py --csv data/sample_billing.csv --out out/
+
+# Write CSV outputs to out/ (legacy flag)
+python scripts/cost_dashboard.py --csv data/sample_billing.csv --out-dir out/
+```
+
+### Smoke test
+
+```bash
+rm -rf out/
+python scripts/cost_dashboard.py --csv data/sample_billing.csv --out-dir out/
+echo $?
+ls -la out/
+```
+
+Expected output: exit code `0` and three CSV files in `out/`:
+- `daily_totals.csv`
+- `spend_by_dimensions.csv`
+- `cost_components.csv`
+
+
 ## Support
 
 If you have problems or questions, head to n8n's forum: https://community.n8n.io
