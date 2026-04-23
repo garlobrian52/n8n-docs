@@ -1,0 +1,10 @@
+date,service,project,amount_usd
+2024-01-05,Compute Engine,project-alpha,120.50
+2024-01-12,Cloud Storage,project-alpha,18.30
+2024-01-20,BigQuery,project-beta,45.00
+2024-02-03,Compute Engine,project-alpha,135.75
+2024-02-14,Cloud Storage,project-beta,22.80
+2024-02-28,BigQuery,project-alpha,60.00
+2024-03-01,Compute Engine,project-beta,98.40
+2024-03-15,Cloud Storage,project-alpha,15.60
+2024-03-22,BigQuery,project-beta,72.50
