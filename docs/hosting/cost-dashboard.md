@@ -10,7 +10,7 @@ as CSV files to an output directory.
 
 ## Input CSV format
 
-The input file must be a CSV with the following columns:
+The input file must be a [CSV](https://docs.python.org/3/library/csv.html) with the following columns:
 
 | Column | Description |
 |--------|-------------|
