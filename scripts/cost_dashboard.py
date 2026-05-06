@@ -15,6 +15,9 @@ Output files written to the chosen directory:
   - daily_totals.csv
   - by_dimensions.csv
   - cost_breakdown.csv
+
+Langfuse tracing is enabled automatically when LANGFUSE_PUBLIC_KEY,
+LANGFUSE_SECRET_KEY, and LANGFUSE_HOST environment variables are set.
 """
 
 import argparse
@@ -22,6 +25,33 @@ import csv
 import os
 import sys
 from collections import defaultdict
+
+try:
+    from langfuse.decorators import langfuse_context, observe
+
+    _LANGFUSE_AVAILABLE = True
+except ImportError:
+    _LANGFUSE_AVAILABLE = False
+
+    def observe(*args, **kwargs):  # type: ignore[misc]
+        """No-op shim when langfuse is not installed."""
+
+        def decorator(func):
+            return func
+
+        return decorator if not args else decorator(args[0])
+
+    class _LangfuseContextStub:
+        def update_current_observation(self, **kwargs):
+            pass
+
+        def update_current_trace(self, **kwargs):
+            pass
+
+        def flush(self):
+            pass
+
+    langfuse_context = _LangfuseContextStub()  # type: ignore[assignment]
 
 
 def parse_args(argv=None):
@@ -62,12 +92,17 @@ def resolve_output_dir(args):
     return args.out if args.out is not None else args.out_dir
 
 
+@observe()
 def read_billing(csv_path):
     rows = []
     with open(csv_path, newline="", encoding="utf-8") as fh:
         reader = csv.DictReader(fh)
         for row in reader:
             rows.append(row)
+    langfuse_context.update_current_observation(
+        input={"csv_path": csv_path},
+        output={"row_count": len(rows)},
+    )
     return rows
 
 
@@ -93,24 +128,42 @@ def _sum_by(rows, key_field):
     return {k: round(v, _COST_DECIMALS) for k, v in sorted(totals.items())}
 
 
+@observe()
 def compute_daily_totals(rows):
-    return [
+    result = [
         {"date": d, "total_cost": t} for d, t in _sum_by(rows, "date").items()
     ]
+    langfuse_context.update_current_observation(
+        input={"row_count": len(rows)},
+        output={"days": len(result)},
+    )
+    return result
 
 
+@observe()
 def compute_by_dimensions(rows):
-    return [
+    result = [
         {"dimension": dim, "total_cost": t}
         for dim, t in _sum_by(rows, "dimension").items()
     ]
+    langfuse_context.update_current_observation(
+        input={"row_count": len(rows)},
+        output={"dimensions": len(result)},
+    )
+    return result
 
 
+@observe()
 def compute_cost_breakdown(rows):
-    return [
+    result = [
         {"service": svc, "total_cost": t}
         for svc, t in _sum_by(rows, "service").items()
     ]
+    langfuse_context.update_current_observation(
+        input={"row_count": len(rows)},
+        output={"services": len(result)},
+    )
+    return result
 
 
 def write_csv(path, fieldnames, rows):
@@ -132,9 +185,14 @@ def print_table(title, rows, fields):
         print("  ".join(f"{str(row[f]):<20}" for f in fields))
 
 
+@observe(name="cost-dashboard-run")
 def main(argv=None):
     args = parse_args(argv)
     out_dir = resolve_output_dir(args)
+
+    langfuse_context.update_current_trace(
+        input={"csv": args.csv, "out_dir": out_dir},
+    )
 
     rows = read_billing(args.csv)
 
@@ -163,6 +221,16 @@ def main(argv=None):
         print("  daily_totals.csv")
         print("  by_dimensions.csv")
         print("  cost_breakdown.csv")
+
+    langfuse_context.update_current_trace(
+        output={
+            "row_count": len(rows),
+            "days": len(daily),
+            "dimensions": len(by_dim),
+            "services": len(breakdown),
+        },
+    )
+    langfuse_context.flush()
 
 
 if __name__ == "__main__":
