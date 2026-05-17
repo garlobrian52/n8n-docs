@@ -1332,6 +1332,7 @@ nav:
           - Langchain concepts in n8n: advanced-ai/langchain/langchain-n8n.md
           - LangChain learning resources: advanced-ai/langchain/langchain-learning-resources.md
           - Use LangSmith with n8n: advanced-ai/langchain/langsmith.md
+          - Use Langfuse with n8n: advanced-ai/langchain/langfuse.md
       - Evaluations:
           - Overview: advanced-ai/evaluations/overview.md
           - Light evaluations: advanced-ai/evaluations/light-evaluations.md
