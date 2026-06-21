@@ -83,4 +83,4 @@ To fix this, change the base URL in your [Ollama credentials](/integrations/buil
 
 Ollama doesn't support custom HTTP agents in its configuration. This makes it difficult to use Ollama behind custom HTTP/HTTPS proxies. Depending on your proxy configuration, it might not work at all, despite setting the `HTTP_PROXY` or `HTTPS_PROXY` environment variables.
 
-Refer to [Ollama's FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-do-i-use-ollama-behind-a-proxy) for more information.
+Refer to [Ollama's FAQ](https://github.com/ollama/ollama/blob/main/docs/faq.mdx#how-do-i-use-ollama-behind-a-proxy) for more information.

@@ -15,7 +15,7 @@ If using the [n8n node starter](https://github.com/n8n-io/n8n-nodes-starter): Ru
 If using VS Code, install the [ESLint VS Code extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint). For other IDEs, refer to their ESLint integrations.
 
 /// note | Don't edit the configuration file
-[`.eslintrc.js`](https://github.com/n8n-io/n8n-nodes-starter/blob/master/.eslintrc.js) contains the configuration for `eslint-plugin-n8n-nodes-base`. Don't edit this file.
+The `.eslintrc.js` file in the n8n nodes starter contains the configuration for `eslint-plugin-n8n-nodes-base`. Don't edit this file.
 ///
 
 ## Usage

@@ -28,4 +28,4 @@ Refer to [Affinity's API documentation](https://support.affinity.co/s/article/Ge
 
 To configure this credential, you'll need:
 
-- An **API Key**: Refer to [How to obtain your Affinity API key documentation](https://support.affinity.co/hc/en-us/articles/360032633992-How-to-obtain-your-Affinity-API-key) to get your API key.
+- An **API Key**: Refer to [Affinity's API FAQs documentation](https://support.affinity.co/s/article/Getting-started-with-the-Affinity-API-FAQs) to get your API key.

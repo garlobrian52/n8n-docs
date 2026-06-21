@@ -27,5 +27,3 @@ Refer to [Tapfiliate's API documentation](https://tapfiliate.com/docs/rest/) for
 To configure this credential, you'll need:
 
 - An **API Key**: Get your API Key from your [**Profile Settings**](https://app.tapfiliate.com/a/profile/) **> API Key**.
-
-Refer to [Your API key](https://support.tapfiliate.com/en/articles/1441950-your-api-key) for more information.
